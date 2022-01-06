@@ -10,7 +10,7 @@
 	String password = request.getParameter("password");
 	String content = request.getParameter("content");
 
-	GuestbookVo vo = new GuestbookVo(name, password, content);
+	GuestbookVo vo = new GuestbookVo(name, content,password);
 	guestbookDao.guestbookInsert(vo);
 
 	response.sendRedirect("./addList.jsp");
